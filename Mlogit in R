@@ -41,5 +41,7 @@ head(index(CLOGIT),100)
 
 #Standard Logit Test
 
-res1<-mlogit(Choice~train_ind+train_blend+train_grp, data=CLOGIT)
+#Standard Logit Test
+
+res1<-mlogit(Choice~train_ind+train_blend+train_grp+feedsupp_vgrp+feedsupp_grp+feedsupp_one+tech_phone+tech_comp+recog_supvr+recog_conf+recog_cert+time_5+time_10+time_15, data=CLOGIT)
 summary(res1)
