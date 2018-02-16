@@ -1,0 +1,39 @@
+Call:
+mlogit(formula = Choice ~ train_ind + train_blend + train_grp + 
+    feedsupp_vgrp + feedsupp_grp + feedsupp_one + tech_phone + 
+    tech_comp + recog_supvr + recog_conf + recog_cert + time_5 + 
+    time_10 + time_15, data = CLOGIT, method = "nr", print.level = 0)
+
+Frequencies of alternatives:
+        Package A         Package B Current Situation 
+         0.334160          0.641055          0.024786 
+
+nr method
+7 iterations, 0h:0m:0s 
+g'(-H)^-1g = 1.37E-05 
+successive function values within tolerance limits 
+
+Coefficients :
+                               Estimate Std. Error  t-value  Pr(>|t|)    
+Package B:(intercept)          0.080900   0.076822   1.0531  0.292303    
+Current Situation:(intercept) -2.739374   0.175665 -15.5943 < 2.2e-16 ***
+train_ind                      0.143489   0.147710   0.9714  0.331340    
+train_blend                    0.335685   0.118152   2.8411  0.004495 ** 
+train_grp                      0.265023   0.129960   2.0393  0.041424 *  
+feedsupp_vgrp                 -0.584933   0.241429  -2.4228  0.015401 *  
+feedsupp_grp                  -0.554349   0.240341  -2.3065  0.021082 *  
+feedsupp_one                  -0.634518   0.249383  -2.5443  0.010948 *  
+tech_phone                     0.631385   0.242229   2.6066  0.009146 ** 
+tech_comp                      0.426291   0.243286   1.7522  0.079736 .  
+recog_supvr                   -1.062942   0.240262  -4.4241 9.684e-06 ***
+recog_conf                    -0.794784   0.246036  -3.2304  0.001236 ** 
+recog_cert                     0.646870   0.240336   2.6915  0.007113 ** 
+time_5                         0.222904   0.261640   0.8519  0.394242    
+time_10                        0.477326   0.253212   1.8851  0.059419 .  
+time_15                        0.077135   0.268823   0.2869  0.774161    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Log-Likelihood: -2582.1
+McFadden R^2:  0.2169 
+Likelihood ratio test : chisq = 1430.4 (p.value = < 2.22e-16)

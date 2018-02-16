@@ -1,0 +1,41 @@
+FEMALE CHOICE SETS 
+
+Call:
+mlogit(formula = choice ~ train_ind + train_blend + train_grp + 
+    feedsupp_vgrp + feedsupp_grp + feedsupp_one + tech_phone + 
+    tech_comp + recog_supvr + recog_conf + recog_cert + time_5 + 
+    time_10 + time_15, data = GFLOGIT, method = "nr", print.level = 0)
+
+Frequencies of alternatives:
+        Package A         Package B Current Situation 
+         0.340909          0.632189          0.026902 
+
+nr method
+7 iterations, 0h:0m:0s 
+g'(-H)^-1g = 4.02E-05 
+successive function values within tolerance limits 
+
+Coefficients :
+                               Estimate Std. Error t-value  Pr(>|t|)    
+Package B:(intercept)          0.024733   0.104567  0.2365  0.813020    
+Current Situation:(intercept) -2.310251   0.239852 -9.6320 < 2.2e-16 ***
+train_ind                      0.380675   0.201827  1.8861  0.059275 .  
+train_blend                    0.503878   0.164158  3.0695  0.002144 ** 
+train_grp                      0.565238   0.179458  3.1497  0.001634 ** 
+feedsupp_vgrp                 -1.024268   0.363607 -2.8170  0.004848 ** 
+feedsupp_grp                  -0.961291   0.363756 -2.6427  0.008225 ** 
+feedsupp_one                  -0.942985   0.375006 -2.5146  0.011917 *  
+tech_phone                     1.041271   0.332398  3.1326  0.001733 ** 
+tech_comp                      0.881598   0.333528  2.6433  0.008211 ** 
+recog_supvr                   -0.804217   0.325145 -2.4734  0.013383 *  
+recog_conf                    -0.529143   0.332270 -1.5925  0.111271    
+recog_cert                     0.782818   0.325718  2.4034  0.016245 *  
+time_5                         0.647042   0.344129  1.8802  0.060076 .  
+time_10                        0.776344   0.336114  2.3098  0.020901 *  
+time_15                        0.379142   0.353646  1.0721  0.283678    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Log-Likelihood: -1306.9
+McFadden R^2:  0.19608 
+Likelihood ratio test : chisq = 637.54 (p.value = < 2.22e-16)
