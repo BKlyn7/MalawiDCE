@@ -1,0 +1,64 @@
+Call:
+mlogit(formula = choice ~ train_ind + train_blend + train_grp + 
+    feedsupp_vgrp + feedsupp_grp + feedsupp_one + tech_phone + 
+    tech_comp + recog_supvr + recog_conf + recog_cert + time_5 + 
+    time_10 + time_15 | agen + survey_level + gender + out_of_school_experience + 
+    highest_level + district + facility + health_worker_cadre + 
+    computer_access + phone_access + tablet_access, data = ELOGIT, 
+    method = "nr", print.level = 0)
+
+Frequencies of alternatives:
+Current Situation         Package B         Package A 
+         0.024786          0.641055          0.334160 
+
+nr method
+7 iterations, 0h:0m:1s 
+g'(-H)^-1g = 1.05E-07 
+gradient close to zero 
+
+Coefficients :
+                                     Estimate Std. Error t-value  Pr(>|t|)    
+Package B:(intercept)               1.7443625  1.0038797  1.7376 0.0822776 .  
+Package A:(intercept)               2.0879866  1.0336612  2.0200 0.0433843 *  
+train_ind                           0.2015481  0.1507308  1.3371 0.1811773    
+train_blend                         0.3901535  0.1213887  3.2141 0.0013086 ** 
+train_grp                           0.3296773  0.1337998  2.4640 0.0137412 *  
+feedsupp_vgrp                      -0.3321062  0.2459389 -1.3504 0.1769003    
+feedsupp_grp                       -0.3211256  0.2439005 -1.3166 0.1879643    
+feedsupp_one                       -0.4063408  0.2544851 -1.5967 0.1103286    
+tech_phone                          0.6003896  0.2641708  2.2727 0.0230423 *  
+tech_comp                           0.3819356  0.2649235  1.4417 0.1493919    
+recog_supvr                        -1.1152713  0.2608121 -4.2761 1.902e-05 ***
+recog_conf                         -0.8477992  0.2659187 -3.1882 0.0014317 ** 
+recog_cert                          0.6203409  0.2612653  2.3744 0.0175788 *  
+time_5                              0.3613907  0.2776536  1.3016 0.1930572    
+time_10                             0.6346573  0.2694500  2.3554 0.0185038 *  
+time_15                             0.1969543  0.2838768  0.6938 0.4878063    
+Package B:agen                      0.0903756  0.1477494  0.6117 0.5407484    
+Package A:agen                      0.1713363  0.1495768  1.1455 0.2520129    
+Package B:survey_level             -0.8233770  0.1815805 -4.5345 5.774e-06 ***
+Package A:survey_level             -0.7848499  0.1836713 -4.2731 1.928e-05 ***
+Package B:gender                    0.4183115  0.2206671  1.8957 0.0580040 .  
+Package A:gender                    0.3475773  0.2233753  1.5560 0.1197024    
+Package B:out_of_school_experience  0.1216737  0.1168540  1.0412 0.2977617    
+Package A:out_of_school_experience  0.1494295  0.1183627  1.2625 0.2067794    
+Package B:highest_level             0.1143293  0.0740553  1.5438 0.1226277    
+Package A:highest_level             0.0957322  0.0751606  1.2737 0.2027691    
+Package B:district                 -0.2383151  0.0539897 -4.4141 1.014e-05 ***
+Package A:district                 -0.1908682  0.0545670 -3.4979 0.0004690 ***
+Package B:facility                  0.1424514  0.0265099  5.3735 7.721e-08 ***
+Package A:facility                  0.1144882  0.0268908  4.2575 2.067e-05 ***
+Package B:health_worker_cadre      -0.0363857  0.0090472 -4.0218 5.776e-05 ***
+Package A:health_worker_cadre      -0.0396258  0.0092129 -4.3011 1.700e-05 ***
+Package B:computer_access          -0.0983306  0.2830772 -0.3474 0.7283185    
+Package A:computer_access          -0.0170465  0.2869218 -0.0594 0.9526242    
+Package B:phone_access              2.1287764  0.6505490  3.2723 0.0010668 ** 
+Package A:phone_access              1.5394476  0.6815492  2.2587 0.0238991 *  
+Package B:tablet_access             1.0908582  0.3230788  3.3764 0.0007343 ***
+Package A:tablet_access             0.9944310  0.3255596  3.0545 0.0022541 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Log-Likelihood: -2529.8
+McFadden R^2:  0.23277 
+Likelihood ratio test : chisq = 1535 (p.value = < 2.22e-16)
