@@ -1,0 +1,91 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\BKlyn\Desktop\CooperSmith\Discrete Choice\Up To Date Script\DCELog.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}14 Mar 2018, 09:45:50
+
+{com}. clogit choice asca ascb train feedback tech recognition time, group(obsid)
+{res}
+{txt}Iteration 0:{space 3}log likelihood = {res:-2997.9676}  
+Iteration 1:{space 3}log likelihood = {res:-2729.6374}  
+Iteration 2:{space 3}log likelihood = {res:-2718.3131}  
+Iteration 3:{space 3}log likelihood = {res:-2718.2476}  
+Iteration 4:{space 3}log likelihood = {res:-2718.2476}  
+{res}
+{txt}Conditional (fixed-effects) logistic regression
+
+{col 49}Number of obs{col 67}= {res}    13,524
+{txt}{col 49}LR chi2({res}7{txt}){col 67}= {res}   4468.59
+{txt}{col 49}Prob > chi2{col 67}= {res}    0.0000
+{txt}Log likelihood = {res}-2718.2476{txt}{col 49}Pseudo R2{col 67}= {res}    0.4511
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      choice{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      z{col 46}   P>|z|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 8}asca {c |}{col 14}{res}{space 2} .4902856{col 26}{space 2} .1453621{col 37}{space 1}    3.37{col 46}{space 3}0.001{col 54}{space 4} .2053811{col 67}{space 3} .7751901
+{txt}{space 8}ascb {c |}{col 14}{res}{space 2} .9238042{col 26}{space 2} .1405955{col 37}{space 1}    6.57{col 46}{space 3}0.000{col 54}{space 4} .6482422{col 67}{space 3} 1.199366
+{txt}{space 7}train {c |}{col 14}{res}{space 2} .1901185{col 26}{space 2} .0275232{col 37}{space 1}    6.91{col 46}{space 3}0.000{col 54}{space 4} .1361741{col 67}{space 3} .2440629
+{txt}{space 4}feedback {c |}{col 14}{res}{space 2}-.0110948{col 26}{space 2} .0302564{col 37}{space 1}   -0.37{col 46}{space 3}0.714{col 54}{space 4}-.0703962{col 67}{space 3} .0482066
+{txt}{space 8}tech {c |}{col 14}{res}{space 2} .1849595{col 26}{space 2} .0388736{col 37}{space 1}    4.76{col 46}{space 3}0.000{col 54}{space 4} .1087686{col 67}{space 3} .2611505
+{txt}{space 1}recognition {c |}{col 14}{res}{space 2} .7652648{col 26}{space 2} .0293916{col 37}{space 1}   26.04{col 46}{space 3}0.000{col 54}{space 4} .7076582{col 67}{space 3} .8228714
+{txt}{space 8}time {c |}{col 14}{res}{space 2}-.0044473{col 26}{space 2}  .005306{col 37}{space 1}   -0.84{col 46}{space 3}0.402{col 54}{space 4}-.0148469{col 67}{space 3} .0059523
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+
+{com}. test asca = ascb
+
+{p 0 7}{space 1}{text:( 1)}{space 1} {res}[choice]asca - [choice]ascb = 0{p_end}
+
+{txt}{col 12}chi2(  1) ={res}   91.41
+{txt}{col 10}Prob > chi2 =  {res}  0.0000
+
+{com}. wtp time train tech recognition feedback
+
+     {txt}      train         tech  recognition     feedback
+wtp  {res}  42.748968    41.588949    172.07309   -2.4947108
+{txt} ll  {res} -56.164709   -58.088048   -227.92203   -17.712416
+{txt} ul  {res}  141.66265    141.26595    572.06822    12.722995
+
+{com}. mixlogit choice, rand ( train feedback tech recognition time) group (obsid) id (uid)
+{res}
+{txt}Iteration 0:{col 16}log likelihood = {res}-2717.2397{txt}  (not concave)
+{res}{txt}Iteration 1:{col 16}log likelihood = {res}-2644.7949{txt}  
+{res}{txt}Iteration 2:{col 16}log likelihood = {res}-2554.2269{txt}  
+{res}{txt}Iteration 3:{col 16}log likelihood = {res}-2535.3379{txt}  
+{res}{txt}Iteration 4:{col 16}log likelihood = {res}-2512.9005{txt}  
+{res}{txt}Iteration 5:{col 16}log likelihood = {res}-2511.9338{txt}  
+{res}{txt}Iteration 6:{col 16}log likelihood = {res} -2511.931{txt}  
+{res}{txt}Iteration 7:{col 16}log likelihood = {res} -2511.931{txt}  
+
+Mixed logit model{col 49}Number of obs{col 67}= {res}    13,524
+{txt}{col 49}LR chi2({res}5{txt}){col 67}= {res}    536.56
+{txt}Log likelihood = {res} -2511.931{txt}{col 49}Prob > chi2{col 67}= {res}    0.0000
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      choice{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      z{col 46}   P>|z|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}Mean         {txt}{c |}
+{space 7}train {c |}{col 14}{res}{space 2} .2247151{col 26}{space 2} .0317332{col 37}{space 1}    7.08{col 46}{space 3}0.000{col 54}{space 4} .1625192{col 67}{space 3}  .286911
+{txt}{space 4}feedback {c |}{col 14}{res}{space 2} .1475127{col 26}{space 2}  .033358{col 37}{space 1}    4.42{col 46}{space 3}0.000{col 54}{space 4} .0821322{col 67}{space 3} .2128933
+{txt}{space 8}tech {c |}{col 14}{res}{space 2} .2463275{col 26}{space 2} .0532524{col 37}{space 1}    4.63{col 46}{space 3}0.000{col 54}{space 4} .1419548{col 67}{space 3} .3507003
+{txt}{space 1}recognition {c |}{col 14}{res}{space 2} 1.299394{col 26}{space 2} .0583673{col 37}{space 1}   22.26{col 46}{space 3}0.000{col 54}{space 4} 1.184996{col 67}{space 3} 1.413791
+{txt}{space 8}time {c |}{col 14}{res}{space 2}-.0031924{col 26}{space 2}  .005949{col 37}{space 1}   -0.54{col 46}{space 3}0.592{col 54}{space 4}-.0148523{col 67}{space 3} .0084674
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}SD           {txt}{c |}
+{space 7}train {c |}{col 14}{res}{space 2} .2574121{col 26}{space 2}  .042567{col 37}{space 1}    6.05{col 46}{space 3}0.000{col 54}{space 4} .1739822{col 67}{space 3} .3408419
+{txt}{space 4}feedback {c |}{col 14}{res}{space 2} .1237891{col 26}{space 2} .0518075{col 37}{space 1}    2.39{col 46}{space 3}0.017{col 54}{space 4} .0222483{col 67}{space 3}   .22533
+{txt}{space 8}tech {c |}{col 14}{res}{space 2} .6021987{col 26}{space 2} .0638299{col 37}{space 1}    9.43{col 46}{space 3}0.000{col 54}{space 4} .4770943{col 67}{space 3} .7273031
+{txt}{space 1}recognition {c |}{col 14}{res}{space 2} .7693735{col 26}{space 2} .0497794{col 37}{space 1}   15.46{col 46}{space 3}0.000{col 54}{space 4} .6718076{col 67}{space 3} .8669394
+{txt}{space 8}time {c |}{col 14}{res}{space 2} .0321501{col 26}{space 2} .0088911{col 37}{space 1}    3.62{col 46}{space 3}0.000{col 54}{space 4}  .014724{col 67}{space 3} .0495763
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+The sign of the estimated standard deviations is irrelevant: interpret them as
+being positive
+
+{com}. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\BKlyn\Desktop\CooperSmith\Discrete Choice\Up To Date Script\DCELog.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res}14 Mar 2018, 09:47:40
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}
