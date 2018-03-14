@@ -1,0 +1,4 @@
+clogit choice asca ascb train feedback tech recognition time, group(obsid)
+test asca = ascb
+wtp time train tech recognition feedback
+mixlogit choice, rand ( train feedback tech recognition time) group (obsid) id (uid)
